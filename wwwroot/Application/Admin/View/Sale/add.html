@@ -1,0 +1,115 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>{$info['id']?'修改':'添加'}租售</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">发布人：</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="name" value="{$info.name|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">标题：</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="title" value="{$info.title|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">价格：</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="price" value="{$info.price|default=''}">
+                单位：<select>
+                <option value="1">元/月</option>
+                <option value="10">万元/月</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">类型</label>
+            <div class="controls">
+               <select name="type">
+                   <option value="{$info.type|default='1'}">出租</option>
+                   <option value="{$info.type|default='2'}">出售</option>
+               </select>
+            </div>
+        </div>
+        <div class="form-item">
+           <!-- <label class="item-label">内容</label>
+            <div class="controls">
+                <label class="textarea input-large"><textarea name="content">{$info.content}</textarea></label>
+            </div>
+        </div>-->
+        <label class="item-label">内容<span class="check-tips"></span></label>
+            <div class="controls">
+                <label class="textarea">
+                    <textarea name="content">{$info.content}</textarea>
+                    <input type="hidden" name="parse" value="0">
+                    <link rel="stylesheet" href="/Public/static/kindeditor/default/default.css" />
+                    <script charset="utf-8" src="/Public/static/kindeditor/kindeditor-min.js"></script>
+                    <script charset="utf-8" src="/Public/static/kindeditor/zh_CN.js"></script>
+                    <!--富文本编辑器-->
+                    <script type="text/javascript">
+                        var editor_content;
+                        KindEditor.ready(function(K) {
+                            editor_content = K.create('textarea[name="content"]', {
+                                allowFileManager : false,
+                                themesPath: K.basePath,
+                                width: '100%',
+                                height: '500px',
+                                resizeType: 1,
+                                pasteType : 2,
+                                urlType : 'absolute',
+                                fileManagerJson : '/admin.php/Sale/fileManagerJson.html',
+                                //uploadJson : '/admin.php/Sale/uploadJson.html' }
+                                uploadJson : '/admin.php/Addons/execute/_addons/EditorForAdmin/_controller/Upload/_action/ke_upimg.html',
+                                extraFileUploadParams: {
+                                    session_id : '11r3i15i85e87iukvpg8gkglt5'
+                                }
+                            });
+                        });
+
+                        $(function(){
+                            //传统表单提交同步
+                            $('textarea[name="content"]').closest('form').submit(function(){
+                                editor_content.sync();
+                            });
+                            //ajax提交之前同步
+                            $('button[type="submit"],#submit,.ajax-post,#autoSave').click(function(){
+                                editor_content.sync();
+                            });
+                        })
+                    </script>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label class="item-label">简单描述</label>
+            <div class="controls">
+                <label class="textarea input-large"><textarea name="description">{$info.description}</textarea></label>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">截止日期</label>
+            <div class="controls">
+                <input type="datetime-local" class="text time" name="end_time" value="{$info.end_time|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">电话</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="tel" value="{$info.tel|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <input type="hidden" name="id" value="{$info.id|default=''}">
+            <button class="btn submit-btn ajax-post no-refresh" type="submit" target-form="form-horizontal">提 交</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+
