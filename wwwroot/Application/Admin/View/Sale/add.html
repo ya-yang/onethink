@@ -1,10 +1,11 @@
 <extend name="Public/base"/>
 
+
 <block name="body">
     <div class="main-title">
         <h2>{$info['id']?'修改':'添加'}租售</h2>
     </div>
-    <form action="{:U()}" method="post" class="form-horizontal">
+    <form action="{:U()}" method="post" class="form-horizontal" enctype="multipart/form-data">
         <div class="form-item">
             <label class="item-label">发布人：</label>
             <div class="controls">
@@ -21,9 +22,13 @@
             <label class="item-label">价格：</label>
             <div class="controls">
                 <input type="text" class="text input-large" name="price" value="{$info.price|default=''}">
-                单位：<select>
-                <option value="1">元/月</option>
-                <option value="10">万元/月</option>
+                单位：<select name="unit">
+                <option value="0" <if condition="$info.unit eq 0 "> selected="selected"
+                <else />
+            </if>>元/月</option>
+                <option value="1" <if condition="$info.unit eq 1 "> selected="selected"
+                <else />
+            </if>>万元/月</option>
             </select>
             </div>
         </div>
@@ -31,10 +36,57 @@
             <label class="item-label">类型</label>
             <div class="controls">
                <select name="type">
-                   <option value="{$info.type|default='1'}">出租</option>
-                   <option value="{$info.type|default='2'}">出售</option>
+                   <option value="1" <if condition="$info.type eq 1 "> selected="selected"
+                   <else />
+               </if>>出租</option>
+                   <option value="2" <if condition="$info.type eq 2 "> selected="selected"
+                   <else />
+               </if>>出售</option>
                </select>
+                状态：<select name="status">
+                <option value="0" <if condition="$info.status eq 0 "> selected="selected"
+                <else />
+            </if>>未租/售</option>
+                <option value="1" <if condition="$info.status eq 1 "> selected="selected"
+                <else />
+            </if>>已租/售</option>
+            </select>
+
+
             </div>
+
+
+
+        </div>
+
+
+        <div class="form-item">
+            <div class="controls">
+                <input id="upload_button" type="file" multiple="true" value=""/>
+                <input id="path" type="hidden" name="path" value="{$info.path|default=''}"/>
+                <div class="upload-img-box">
+                    <img src="{$info.path|default=''}">
+                </div>
+                <link rel="stylesheet" type="text/css" href="/Public/static/uploadify/uploadify.css" />
+                <script type="text/javascript" src="/Public/static/uploadify/jquery.uploadify.min.js"></script>
+                <script type="text/javascript">
+
+                    $('#upload_button').uploadify({
+                        'swf'      : '/Public/static/uploadify/uploadify.swf',
+                        'uploader' : '{:U("sale/uploadify")}',//这个就是处理上传文件的地址
+                        'width': 80,
+                        'buttonText' : '上传照片',
+                        'onUploadSuccess' : function(file, data, response) {
+                            $("#path").val('/Uploads/images/'+data);
+                            $('img').attr('src','/Uploads/images/'+data);
+                            $('#pic').val(data);
+                        },
+
+                    });
+
+                </script>
+            </div>
+
         </div>
         <div class="form-item">
            <!-- <label class="item-label">内容</label>
@@ -86,6 +138,7 @@
             </div>
         </div>
 
+
         <div class="form-item">
             <label class="item-label">简单描述</label>
             <div class="controls">
@@ -93,11 +146,11 @@
             </div>
         </div>
         <div class="form-item">
-            <label class="item-label">截止日期</label>
+            <label class="item-label">截止日期：</label>
             <div class="controls">
-                <input type="datetime-local" class="text time" name="end_time" value="{$info.end_time|default=''}">
-            </div>
+                <input type="text" class="text time" name="end_time" value="{$info.end_time|default=''}"></div>
         </div>
+
         <div class="form-item">
             <label class="item-label">电话</label>
             <div class="controls">
@@ -110,6 +163,85 @@
             <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
         </div>
     </form>
+
+    <link href="/Public/static/datetimepicker/css/datetimepicker.css" rel="stylesheet" type="text/css">
+
+    <link href="/Public/static/datetimepicker/css/datetimepicker_blue.css" rel="stylesheet" type="text/css">
+    <link href="/Public/static/datetimepicker/css/dropdown.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Public/static/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="/Public/static/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"
+            charset="UTF-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.date').datetimepicker({
+                format: 'yyyy-mm-dd',
+                language:"zh-CN",
+                minView:2,
+                autoclose:true
+            });
+            $('.time').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii',
+                language:"zh-CN",
+                minView:2,
+                autoclose:true
+            });
+            showTab();
+            highlight_subnav('/admin.php/Sale/index.html');
+            //保存草稿
+            var interval;
+            $('#autoSave').click(function(){
+                var target_form = $(this).attr('target-form');
+                var target = $(this).attr('url')
+                var form = $('.'+target_form);
+                var query = form.serialize();
+                var that = this;
+
+                $(that).addClass('disabled').attr('autocomplete','off').prop('disabled',true);
+                $.post(target,query).success(function(data){
+                    if (data.status==1) {
+                        updateAlert(data.info ,'alert-success');
+                        $('input[name=id]').val(data.data.id);
+                    }else{
+                        updateAlert(data.info);
+                    }
+                    setTimeout(function(){
+                        $('#top-alert').find('button').click();
+                        $(that).removeClass('disabled').prop('disabled',false);
+                    },1500);
+                })
+
+                //重新开始定时器
+                clearInterval(interval);
+                autoSaveDraft();
+                return false;
+            });
+
+            //Ctrl+S保存草稿
+            $('body').keydown(function(e){
+                if(e.ctrlKey && e.which == 83){
+                    $('#autoSave').click();
+                    return false;
+                }
+            });
+
+            //每隔一段时间保存草稿
+            function autoSaveDraft(){
+                interval = setInterval(function(){
+                    //只有基础信息填写了，才会触发
+                    var title = $('input[name=title]').val();
+                    var name = $('input[name=name]').val();
+                    var des = $('textarea[name=description]').val();
+                    if(title != '' || name != '' || des != ''){
+                        $('#autoSave').click();
+                    }
+                }, 1000*parseInt(60));
+            }
+            autoSaveDraft();
+        });
+
+
+    </script>
 </block>
+
 
 

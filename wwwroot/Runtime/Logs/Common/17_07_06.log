@@ -50,3 +50,93 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002419s ]
 INFO: [ app_init ] --END-- [ RunTime:0.003002s ]
 
+[ 2017-07-06T21:43:15+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003831s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004478s ]
+
+[ 2017-07-06T22:02:09+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017/07/06/595e42e199b69.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003347s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003975s ]
+
+[ 2017-07-06T22:02:55+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017/07/06/595e430f3a0ca.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003374s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004447s ]
+
+[ 2017-07-06T22:03:43+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017/07/06/595e433f98176.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002550s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002961s ]
+
+[ 2017-07-06T22:04:50+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e4382d49a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003798s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004492s ]
+
+[ 2017-07-06T22:04:59+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e4382d49a2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002466s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002891s ]
+
+[ 2017-07-06T22:06:14+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e43d69ac43.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003815s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004588s ]
+
+[ 2017-07-06T22:07:47+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e4433570e5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002595s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003037s ]
+
+[ 2017-07-06T22:08:02+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e4442706e9.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005720s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006672s ]
+
+[ 2017-07-06T22:10:36+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e44dc7a6cd.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002980s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003406s ]
+
+[ 2017-07-06T22:11:16+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e4504b71b4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004627s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005118s ]
+
+[ 2017-07-06T22:11:21+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e4509bce09.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005288s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005981s ]
+
+[ 2017-07-06T22:15:44+08:00 ] 127.0.0.1 /Uploads/images/Uploads/images/2017-07-06/595e461005388.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002724s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003142s ]
+
+[ 2017-07-06T22:16:15+08:00 ] 127.0.0.1 /admin.php/Sale/Uploads/images/2017-07-06/595e462f4f0d1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002765s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003191s ]
+
+[ 2017-07-06T22:16:29+08:00 ] 127.0.0.1 /Uploads/images/Uploads/images/2017-07-06/595e463d88047.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002691s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003161s ]
+

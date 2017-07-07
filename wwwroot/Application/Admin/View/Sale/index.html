@@ -42,15 +42,19 @@
             <notempty name="list">
                 <volist name="list" id="sale">
                     <tr>
-                        <td><input class="ids" type="checkbox" name="id[]" value="{$vo.uid}" /></td>
+                        <td><input class="ids" type="checkbox" name="id[]" value="{$sale.id}" /></td>
                         <td>{$sale.name}</td>
                         <td>{$sale.tel}</td>
                         <td>{$sale.title}</td>
-                        <td>{$sale.type}</td>
-                        <td>{$sale.price}</td>
+                        <td>
+                            <if condition="$sale.type eq 1 "> 出租
+                                <else /> 出售
+                            </if>
+                        </td>
+                        <td>{$sale.price}　{:$sale['unit']==1 ? '万元/月':'元/月'}</td>
                         <td><span>{$sale.create_time|time_format}</span></td>
-                        <td><span>{$sale.end_time|time_format}</span></td>
-                        <td>{$sale.status ? '已售/租':'未售/租}</td>
+                        <td><span>{$sale.end_time}</span></td>
+                        <td>{:$sale['status']==1?' 已售/租':'未售/租'}</td>
                         <td>
                             <a href="{:U('Sale/edit?id='.$sale['id'])}">编辑</a>
                             <a class="confirm ajax-get" href="{:U('Sale/del?id='.$sale['id'])}">删除</a>

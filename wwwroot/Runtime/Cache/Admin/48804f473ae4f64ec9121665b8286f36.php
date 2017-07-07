@@ -124,15 +124,18 @@
             </thead>
             <tbody>
             <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sale): $mod = ($i % 2 );++$i;?><tr>
-                        <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["uid"]); ?>" /></td>
+                        <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($sale["id"]); ?>" /></td>
                         <td><?php echo ($sale["name"]); ?></td>
                         <td><?php echo ($sale["tel"]); ?></td>
                         <td><?php echo ($sale["title"]); ?></td>
-                        <td><?php echo ($sale["type"]); ?></td>
-                        <td><?php echo ($sale["price"]); ?></td>
+                        <td>
+                            <?php if($sale["type"] == 1 ): ?>出租
+                                <?php else: ?> 出售<?php endif; ?>
+                        </td>
+                        <td><?php echo ($sale["price"]); ?>　<?php echo $sale['unit']==1 ? '万元/月':'元/月';?></td>
                         <td><span><?php echo (time_format($sale["create_time"])); ?></span></td>
-                        <td><span><?php echo (time_format($sale["end_time"])); ?></span></td>
-                        <td><?php echo ($sale["status ? '已售/租':'未售/租"]); ?></td>
+                        <td><span><?php echo ($sale["end_time"]); ?></span></td>
+                        <td><?php echo $sale['status']==1?' 已售/租':'未售/租';?></td>
                         <td>
                             <a href="<?php echo U('Sale/edit?id='.$sale['id']);?>">编辑</a>
                             <a class="confirm ajax-get" href="<?php echo U('Sale/del?id='.$sale['id']);?>">删除</a>

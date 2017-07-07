@@ -10,7 +10,6 @@ class SaleController extends AdminController
     public function index(){
         /* 获取频道列表 */
         $list = M('Sale')->order('id asc')->select();
-
         $this->assign('list', $list);
         $this->display();
     }
@@ -71,6 +70,34 @@ class SaleController extends AdminController
             $this->error('删除失败！');
         }
 
+    }
+
+
+
+    //上传类
+    public function uploadify(){
+        if (!empty($_FILES)) {
+            import("@.Think.UploadFile");
+            $upload = new \Think\Upload();
+            $upload->rootPath  = './Uploads/images/';//根路径
+            $upload->savePath = date('Y-m-d').'/';//子路径，文件夹自动分级好点，不然文件太多了数量大了以后不好找图片
+            $upload->exts = array('jpg', 'gif', 'png', 'jpeg', 'bmp', 'doc', 'xls', 'mp4', 'avi', 'docx', 'xlsx');//可以上传的文件类型
+            $upload->autoSub = false;
+            $upload->saveRule = uniqid; //上传规则，文件名会自动重新获取，这样保证文件不会被覆盖
+            $info = $upload->upload();
+            if(!$info){
+                echo $this->error($upload->getError());//获取失败信息
+            } else {
+                //成功
+                $fileArray = "";
+                foreach ($info as $file) {
+                    //返回文件在服务器上的路径
+                    $fileArray =$file['savepath'] . $file['savename'];
+
+                }
+                echo trim($fileArray);
+            }
+        }
     }
 
 }
