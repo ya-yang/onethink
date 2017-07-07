@@ -1,6 +1,143 @@
-[ 2017-07-07T08:50:01+08:00 ] 127.0.0.1 /favicon.ico
+[ 2017-07-07T16:31:26+08:00 ] 127.0.0.1 /wechat.php/Sale/detail/image/2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003664s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004365s ]
+
+[ 2017-07-07T16:31:58+08:00 ] 127.0.0.1 /wechat.php/Sale/detail/image/2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003643s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004432s ]
+
+[ 2017-07-07T16:36:28+08:00 ] 127.0.0.1 /notice.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002968s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003659s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T16:44:57+08:00 ] 127.0.0.1 /wechat.php/image/2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002913s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003355s ]
+
+[ 2017-07-07T17:03:35+08:00 ] 127.0.0.1 /wechat.php/Index/Public/Wechat/static/image/index.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007288s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008050s ]
+
+[ 2017-07-07T17:04:00+08:00 ] 127.0.0.1 /wechat.php/Index/Public/Wechat/static/image/index.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003829s ]
+
+[ 2017-07-07T17:04:23+08:00 ] 127.0.0.1 /wechat.php/Index/Public/Wechat/static/image/index.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004846s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006487s ]
+
+[ 2017-07-07T17:04:52+08:00 ] 127.0.0.1 /wechat.php/Index/Public/Wechat/static/image/index.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004497s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005169s ]
+
+[ 2017-07-07T17:10:56+08:00 ] 127.0.0.1 /wechat.php/index/Public/Wechat/static/image/index.png
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
-INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003691s ]
-INFO: [ app_init ] --END-- [ RunTime:0.004367s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003427s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004156s ]
+
+[ 2017-07-07T18:01:33+08:00 ] 127.0.0.1 /wechat.php/image/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002662s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003332s ]
+
+[ 2017-07-07T18:08:51+08:00 ] 127.0.0.1 /wechat.php/image/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001651s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002039s ]
+
+[ 2017-07-07T18:14:27+08:00 ] 127.0.0.1 /wechat.php/image/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007304s ]
+
+[ 2017-07-07T18:53:34+08:00 ] 127.0.0.1 /Notice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002396s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002799s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T18:53:57+08:00 ] 127.0.0.1 /Notice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003847s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004442s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T18:54:07+08:00 ] 127.0.0.1 /Notice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003456s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004054s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T18:54:24+08:00 ] 127.0.0.1 /Notice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005187s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T18:54:50+08:00 ] 127.0.0.1 /Notice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002414s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002788s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T18:54:52+08:00 ] 127.0.0.1 /Notice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004496s ]
+ERR: 无法加载模块:Notice
+
+[ 2017-07-07T18:54:55+08:00 ] 127.0.0.1 /Sale/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004767s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005683s ]
+ERR: 无法加载模块:Sale
+
+[ 2017-07-07T18:55:09+08:00 ] 127.0.0.1 /Sale/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002669s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003303s ]
+ERR: 无法加载模块:Sale
+
+[ 2017-07-07T18:55:12+08:00 ] 127.0.0.1 /Sale/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002365s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002926s ]
+ERR: 无法加载模块:Sale
+
+[ 2017-07-07T18:55:14+08:00 ] 127.0.0.1 /Sale/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002573s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003111s ]
+ERR: 无法加载模块:Sale
 

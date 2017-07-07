@@ -1,5 +1,29 @@
 day1 07-06
 
+
 后台：
 M创建一个基础模型类 如果单纯的只实现增删改查
 D创建一个自定义模型类 想要实现更高级的功能------如果自定义的模型类不存在则它会创建一个基础模型类；；
+
+day2 07-07
+
+分页类：
+    $list = M('Sale')->order('id asc')->select();
+    $count=count($list);
+    $Page=new \Think\Page($count,4);
+    $show       = $Page->show();
+    $list=array_slice($list,$Page->firstRow,$Page->listRows);
+    $this->assign('list',$list);// 赋值数据集
+    $this->assign('page',$show);// 赋值分页输出
+    $this->display();
+项目传入服务器 不能登录问题
+    因为onethink它的用户模块是单独连接服务器的 所以在Application--->User--->Conf--->config.php里面
+    第18行：
+        // 数据库连接，使用Model方式调用API必须配置此项
+        define('UC_DB_DSN', 'mysql://root:shabi@127.0.0.1:3306/onethink');
+    改成服务器的mysql登录用户和密码
+    最后将Runtime删除让它重新自动生成即可完成
+在后台内容模块添加的文章封面图片显示问题
+    {:get_cover($notice['cover_id'],$field = path)}
+    说明：根据图片id(onethink_picture)返回图片的其他字段值，默认返回所有整行记录
+    参数 int $cover_id 主键值 参数 string $field 字段名 返回值： 完整的数据 或者 指定的$field字段值

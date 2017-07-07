@@ -147,7 +147,7 @@
         </table>
     </div>
     <div class="page">
-        <?php echo ($_page); ?>
+        <?php echo ($page); ?>
     </div>
 
         </div>

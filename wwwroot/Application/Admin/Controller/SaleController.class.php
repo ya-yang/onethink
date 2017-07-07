@@ -8,9 +8,14 @@ class SaleController extends AdminController
 {
     //列表
     public function index(){
-        /* 获取频道列表 */
+        /* 获取列表 */
         $list = M('Sale')->order('id asc')->select();
-        $this->assign('list', $list);
+        $count=count($list);
+        $Page=new \Think\Page($count,4);
+        $show       = $Page->show();
+        $list=array_slice($list,$Page->firstRow,$Page->listRows);
+        $this->assign('list',$list);// 赋值数据集
+        $this->assign('page',$show);// 赋值分页输出
         $this->display();
     }
     //新增

@@ -12,6 +12,7 @@
  * 所有除开系统级别的前台配置
  */
 return array(
+
     /* 数据缓存设置 */
     'DATA_CACHE_PREFIX'    => 'onethink_', // 缓存前缀
     'DATA_CACHE_TYPE'      => 'File', // 数据缓存类型
@@ -49,8 +50,8 @@ return array(
 		'callback' => false, //检测文件是否存在回调函数，如果存在返回文件信息数组
     ), //图片上传相关配置（文件上传类配置）
 
-//    'PICTURE_UPLOAD_DRIVER'=>'local',
-    'PICTURE_UPLOAD_DRIVER'=>'QINIU',
+    'PICTURE_UPLOAD_DRIVER'=>'local',
+//    'PICTURE_UPLOAD_DRIVER'=>'QINIU',
 
     //本地上传文件驱动配置
     'UPLOAD_LOCAL_CONFIG'=>array(),

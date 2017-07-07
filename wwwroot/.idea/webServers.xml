@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="7a799d0e-f779-4fb2-b175-fa0cc594f2d0" name="xiaoqu" url="http://xq.betterya.com">
-        <fileTransfer host="xq.betterya.com" port="21">
+      <webServer id="7a799d0e-f779-4fb2-b175-fa0cc594f2d0" name="xiaoqu" url="http://39.108.103.131">
+        <fileTransfer host="39.108.103.131" port="21">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>

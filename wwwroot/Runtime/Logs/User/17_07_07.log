@@ -1,0 +1,10 @@
+[ 2017-07-07T17:15:56+08:00 ] 127.0.0.1 /User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002385s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001854s ]
+ERR: 无法加载控制器:Register
+
