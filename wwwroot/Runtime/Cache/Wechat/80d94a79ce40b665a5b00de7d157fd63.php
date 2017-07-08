@@ -45,9 +45,9 @@
 
     <div class="container-fluid">
         <div class="blank"></div>
-        <h3 class="noticeDetailTitle"><strong><?php echo $notice['title'];?></strong></h3>
-        <div class="noticeDetailInfo">发布者:<?php echo $notice['name'];?></div>
-        <div class="noticeDetailInfo">发布时间：<?php echo date('Y-m-d H:i:s',$notice['create_time']); ?></div>
+        <h3 class="noticeDetailTitle"><strong><?php echo $notice[0]['title'];?></strong></h3>
+        <div class="noticeDetailInfo">发布者:<?php echo $notice[0]['nickname'];?></div>
+        <div class="noticeDetailInfo">发布时间：<?php echo date('Y-m-d H:i:s',$notice[0]['create_time']); ?></div>
         <div class="noticeDetailContent">
             <?php echo $notice_article['content'];?>
         </div>

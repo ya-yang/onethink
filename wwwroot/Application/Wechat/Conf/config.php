@@ -12,12 +12,14 @@
  * 所有除开系统级别的前台配置
  */
 return array(
-    'URL_MODEL'            => 1,
+
     // 预先加载的标签库
     'TAGLIB_PRE_LOAD'     =>    'OT\\TagLib\\Article,OT\\TagLib\\Think',
-        
+
     /* 主题设置 */
     'DEFAULT_THEME' =>  'default',  // 默认模板主题名称
+    //url模式
+    'URL_MODEL' => 2,
 
     /* 数据缓存设置 */
     'DATA_CACHE_PREFIX' => 'onethink_', // 缓存前缀
@@ -95,4 +97,29 @@ return array(
         'callback' => false, //检测文件是否存在回调函数，如果存在返回文件信息数组
     ), //附件上传配置（文件上传类配置）
 
+    //页面静态化
+    'HTML_CACHE_ON'   => true,     // 开启静态缓存
+    'HTML_CACHE_TIME' => 3600,   // 全局静态缓存有效期（秒）(3600)
+    'HTML_FILE_SUFFIX'=> '.shtml',  // 设置静态缓存文件后缀
+    'HTML_CACHE_RULES'=> array(    // 定义静态缓存规则
+        // 定义格式1 数组方式
+        // 定义格式2 字符串方式
+        //后一个参数是静态缓存有效期,单位为秒。如果不定义，则会获取配置参数HTML_CACHE_TIME 的设置值，如果定义为0则表示永久缓存。
+        'Index:index'    =>array('{:module}/{:controller}_{:action}'),
+        'User:login'   =>array('login',3600),
+    ),
+    'WX_CONFIG'=>[
+        'debug'  => true,
+        'app_id' => 'wxca4b05efb659e4ba',
+        'secret' => '80ec6e55fdbc1391afbbb326f23dc312',
+        'token'  => 'shiny',
+        // 'aes_key' => null, // 可选
+        'log' => [
+            'level' => 'debug',
+            'file'  => ROOT_PATH.'/tmp/easywechat.log', // XXX: 绝对路径！！！！
+        ],
+        //...
+    ],
 );
+
+?>

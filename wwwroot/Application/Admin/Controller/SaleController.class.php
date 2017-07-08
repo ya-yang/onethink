@@ -25,7 +25,6 @@ class SaleController extends AdminController
             $sale = D('Sale');
             $data = $sale->create();
             if ($data) {
-                $sale->end_time=strtotime($sale->end_time);
                 $id = $sale->add();
                 if ($id) {
                     $this->success('新增成功',U('index'));

@@ -6356,3 +6356,45 @@ SQL: UPDATE `config` SET `value`='9' WHERE `name` = 'DATA_BACKUP_COMPRESS_LEVEL'
 SQL: UPDATE `config` SET `value`='1' WHERE `name` = 'DEVELOP_MODE' [ RunTime:0.0002s ]
 SQL: UPDATE `config` SET `value`='' WHERE `name` = 'ADMIN_ALLOW_IP' [ RunTime:0.0002s ]
 
+[ 2017-07-07T19:12:34+08:00 ] 127.0.0.1 /admin.php/Config/save.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0263s ]
+SQL: UPDATE `config` SET `value`='0' WHERE `name` = 'SHOW_PAGE_TRACE' [ RunTime:0.0003s ]
+SQL: UPDATE `config` SET `value`='0:数字
+1:字符
+2:文本
+3:数组
+4:枚举' WHERE `name` = 'CONFIG_TYPE_LIST' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='ambiance' WHERE `name` = 'CODEMIRROR_THEME' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='1:基本
+2:内容
+3:用户
+4:系统' WHERE `name` = 'CONFIG_GROUP_LIST' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='./Data/' WHERE `name` = 'DATA_BACKUP_PATH' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='1:视图
+2:控制器' WHERE `name` = 'HOOKS_TYPE' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='20971520' WHERE `name` = 'DATA_BACKUP_PART_SIZE' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='AUTH_ON:1
+AUTH_TYPE:2' WHERE `name` = 'AUTH_CONFIG' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='1' WHERE `name` = 'DATA_BACKUP_COMPRESS' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='9' WHERE `name` = 'DATA_BACKUP_COMPRESS_LEVEL' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='1' WHERE `name` = 'DEVELOP_MODE' [ RunTime:0.0002s ]
+SQL: UPDATE `config` SET `value`='' WHERE `name` = 'ADMIN_ALLOW_IP' [ RunTime:0.0002s ]
+
+[ 2017-07-07T19:12:36+08:00 ] 127.0.0.1 /admin.php/Config/group/id/4.html
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 4 ORDER BY `sort`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101558s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+

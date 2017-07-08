@@ -43,25 +43,83 @@
     </nav>
     <!--导航结束-->
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="list">
         <?php foreach($notices as $notice): ?>
         <div class="row noticeList">
-            <a href="<?php echo U('Notice/detail?id='.$notice['id']);?>">
+            <a class="detail_view" data-id="<?php echo $notice['id'];?>" href="<?php echo U('Notice/detail?id='.$notice['id']);?>">
                 <div class="col-xs-2">
-                    <img class="noticeImg" src="<?php echo get_cover($notice['cover_id'],$field = path);?>
-" />
+                    <img class="noticeImg" src="<?php echo get_cover($notice['cover_id'],$field = path);?>" />
                 </div>
                 <div class="col-xs-10">
                     <p class="title"><?php echo $notice['title'];?></p>
                     <p class="intro"><?php echo $notice['description'];?></p>
-                    <p class="info">浏览: <?php echo $notice['view']?> <span class="pull-right"><?php echo date('Y-m-d H:i:s',$notice['update_time']); ?></span> </p>
+                    <p class="info">浏览: <span class="view"><?php echo $notice['view']?></span> <span class="pull-right"><?php echo date('Y-m-d H:i:s',$notice['update_time']); ?></span> </p>
                 </div>
             </a>
         </div>
         <?php endforeach;?>
     </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-info ajax-page">获取跟多~~~</button>
+    </div>
 </div>
 <script src="/Public/Wechat/static/jquery-1.11.2.min.js"></script>
 <script src="/Public/Wechat/static/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var p = 1;
+    var url = '/Notice/index';
+    var view_url = '/Notice/view';
+    var inner_url = '/Notice/detail';
+    $(function () {
+        $('.ajax-page').click(function () {
+            p=p+1;
+            $.getJSON(url+'/p/'+p,function (data) {
+                console.debug(data);
+                if(data == null){
+                    $('.ajax-page').html("没有跟多数据了！！").removeClass('ajax-page')
+                }else{
+                    var html="";
+                    $(data).each(function (i,v) {
+                        html += '<div class="row noticeList">\
+                    <a class="detail_view" data-id="'+v.id+'"  href="'+inner_url+'/id/'+v.id+'.html">\
+                        <div class="col-xs-2">\
+                            <img class="img-rounded img-responsive" src="'+v.path+'" />\
+                        </div>\
+                        <div class="col-xs-10">\
+                            <p class="title">'+v.title+'</p>\
+                            <p class="intro">'+v.description+'</p>\
+                            <p class="info">浏览:<span class="view"> '+v.view+'</span> <span class="pull-right">'+new Date(parseInt(v.create_time) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ")+'</span> </p>\
+                        </div>\
+                    </a>\
+                </div>';
+
+                    })
+
+                    $('#list').append(html);
+                }
+
+            })
+
+        })
+    })
+    $('#list').on('click','.detail_view',function () {
+        var id = $(this).attr('data-id');
+//        console.debug(id);
+        $.getJSON(view_url+'/id/'+id,function (data) {
+
+        })
+    })
+
+
+
+</script>
+
 </body>
 </html>

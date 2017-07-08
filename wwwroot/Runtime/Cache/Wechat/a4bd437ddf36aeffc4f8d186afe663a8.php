@@ -58,7 +58,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="service.html">
+                        <a href="<?php echo U('Service/index');?>">
                             <div class="indexLabel label-warning">
                                 <span class="glyphicon glyphicon-ok-circle"></span><br/>
                                 便民服务
@@ -74,7 +74,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="notice.html">
+                        <a href="<?php echo U('Shop/index');?>">
                             <div class="indexLabel label-success">
                                 <span class="glyphicon glyphicon-briefcase"></span><br/>
                                 商家活动
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="notice.html">
+                        <a href="<?php echo U('Activity/index');?>">
                             <div class="indexLabel label-default">
                                 <span class="glyphicon glyphicon-apple"></span><br/>
                                 小区活动

@@ -22,7 +22,7 @@ class UserController extends Controller {
         if(is_login()){
             echo '11111';
         }else{
-            $this->error('您还没有登录，请先登录！', U('user/login'));
+            $this->error('您还没有登录，请先登录！', U('User/login'));
         }
 	}
 
@@ -44,7 +44,7 @@ class UserController extends Controller {
 			$uid = $User->register($username, $password, $email);
 			if(0 < $uid){ //注册成功
 				//TODO: 发送验证邮件
-				$this->success('注册成功！',U('login'));
+				$this->success('注册成功！',U('User/login'));
 			} else { //注册失败，显示错误信息
 				$this->error($this->showRegError($uid));
 			}

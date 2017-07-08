@@ -28,7 +28,7 @@ class IndexController extends Controller {
         if(is_login()){
             echo '11111';
         }else{
-            $this->error('您还没有登录，请先登录！', U('index/login'));
+            $this->error('您还没有登录，请先登录！', U('User/login'));
         }
 
 

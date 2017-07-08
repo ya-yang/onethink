@@ -3758,3 +3758,14 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
 
+[ 2017-07-07T19:37:50+08:00 ] 127.0.0.1 /wechat.php/Notice/detail/id/2.html
+ERR: 1146:Table 'onethink.documentarticle' doesn't exist
+ [ SQL语句 ] : SELECT * FROM member  as  a INNER JOIN DocumentArticle as b  on b.uid = a.uid  WHERE ( b.id  = 2 ) 
+
+[ 2017-07-07T19:38:25+08:00 ] 127.0.0.1 /wechat.php/Notice/detail/id/2.html
+ERR: 1054:Unknown column 'b.uid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM member  as  a INNER JOIN document_article as b  on b.uid = a.uid  WHERE ( b.id  = 2 ) 
+
+[ 2017-07-07T20:03:24+08:00 ] 127.0.0.1 /wechat.php/Service/notice-detail.html
+ERR: 非法操作:notice-detail
+
