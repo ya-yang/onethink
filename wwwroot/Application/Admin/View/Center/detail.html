@@ -1,0 +1,44 @@
+<extend name="Public/base"/>
+
+
+<block name="body">
+    <div class="main-title">
+        <h2>报修详情</h2>
+    </div>
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-item">
+            <span class="item-label">报修编号：
+                <span class="check-tips">{$info.order_id}</span>
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label">状态：
+                <span class="check-tips">{$info.status}</span>
+            </span>
+
+        </div>
+        <div class="form-item">
+            <span class="item-label">保修人：
+                 <span class="check-tips">{$info.name}</span>
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label">报修电话：
+                 <span class="check-tips">{$info.tel}</span>
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label">问题：
+                <span class="check-tips">{$info.question}</span>
+            </span>
+        </div>
+        <div class="form-item">
+            <label class="item-label">说明</label>
+            <div class="controls">
+                <label class="textarea input-large">
+                    <textarea disabled name="remark">{$info.description}</textarea>
+                </label>
+            </div>
+        </div>
+    </form>
+</block>

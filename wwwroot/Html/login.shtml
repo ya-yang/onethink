@@ -47,7 +47,7 @@
         </div><div class="col-xs-3">
             <p class="navbar-text"><a href="/Find/all.html" class="navbar-link">发现</a></p>
         </div><div class="col-xs-3">
-            <p class="navbar-text"><a href="/wechat.php/User/login.html" class="navbar-link">我的</a></p>
+            <p class="navbar-text"><a href="/User/login.html" class="navbar-link">我的</a></p>
         </div>	</div>
     </nav>
     <!--导航结束-->
@@ -59,7 +59,7 @@
 
     <div class="container">
 
-        <form class="form-signin login-form" action="/wechat.php/User/login.html" method="post">
+        <form class="form-signin login-form" action="/User/login.html" method="post">
             <h2 class="form-signin-heading">登陆</h2>
             <p>
                 <label for="inputUsername" class="sr-only">用户名</label>
@@ -85,7 +85,7 @@
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
         </form>
-        <p class="text-danger text-right"><a href="/wechat.php/User/register.html">新用户注册</a></p>
+        <p class="text-danger text-right"><a href="/User/register.html">新用户注册</a></p>
     </div>
     <script src="/Public/Wechat/static/bootstrap/js/bootstrap.min.js"></script>
 

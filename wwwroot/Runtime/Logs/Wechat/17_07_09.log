@@ -1,0 +1,119 @@
+[ 2017-07-09T09:19:35+08:00 ] 127.0.0.1 /online.html
+ERR: 无法加载控制器:Online
+
+[ 2017-07-09T09:21:18+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001659s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0222s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1499563277',`last_login_ip`='2130706433' WHERE `uid` = 3 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0289s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0246s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','3','2130706433','member','3','1499563277','小红帽在2017-07-09 09:21登录了后台') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 3 AND `create_time` > 1499476877 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0106s ]
+SQL: UPDATE `member` SET `score`=score+10 WHERE ( uid=3 AND status>-1 ) [ RunTime:0.0002s ]
+
+[ 2017-07-09T09:29:08+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0148s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1499563748',`last_login_ip`='2130706433' WHERE `uid` = 3 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0197s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0156s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','3','2130706433','member','3','1499563748','小红帽在2017-07-09 09:29登录了后台') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 1 C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 3 AND `create_time` > 1499477348 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-07-09T09:33:06+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0132s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1499563986',`last_login_ip`='2130706433' WHERE `uid` = 3 [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0181s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0144s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','3','2130706433','member','3','1499563986','小红帽在2017-07-09 09:33登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 3 AND `create_time` > 1499477586 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-07-09T09:35:26+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0128s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1499564126',`last_login_ip`='2130706433' WHERE `uid` = 3 [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0183s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0145s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','3','2130706433','member','3','1499564126','小红帽在2017-07-09 09:35登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 3 AND `create_time` > 1499477726 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-07-09T09:35:28+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002673s ]
+
+[ 2017-07-09T09:35:30+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+
+[ 2017-07-09T09:42:52+08:00 ] 127.0.0.1 /User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001587s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0144s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1499564572',`last_login_ip`='2130706433' WHERE `uid` = 3 [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0188s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0151s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','3','2130706433','member','3','1499564572','小红帽在2017-07-09 09:42登录了后台') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\yangya\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 3 AND `create_time` > 1499478172 LIMIT 1   [ RunTime:0.0094s ]
+
+[ 2017-07-09T09:51:29+08:00 ] 127.0.0.1 /jquery-1.11.2.min.js
+ERR: 无法加载控制器:Jquery-1.11.2.min
+
+[ 2017-07-09T09:51:29+08:00 ] 127.0.0.1 /bootstrap/js/bootstrap.min.js
+ERR: 无法加载控制器:Bootstrap
+
+[ 2017-07-09T09:51:29+08:00 ] 127.0.0.1 /bootstrap/css/bootstrap.min.css
+ERR: 无法加载控制器:Bootstrap
+
+[ 2017-07-09T09:51:29+08:00 ] 127.0.0.1 /css/style.css
+ERR: 无法加载控制器:Css
+
+[ 2017-07-09T09:51:29+08:00 ] 127.0.0.1 /bootstrap/js/bootstrap.min.js
+ERR: 无法加载控制器:Bootstrap
+
+[ 2017-07-09T11:38:05+08:00 ] 127.0.0.1 /Repair/ad.html
+ERR: 非法操作:ad
+
+[ 2017-07-09T11:44:05+08:00 ] 127.0.0.1 /Repair/ad.html
+ERR: 非法操作:ad
+
+[ 2017-07-09T11:44:08+08:00 ] 127.0.0.1 /Repair/index.html
+ERR: 非法操作:index
+

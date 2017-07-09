@@ -20,8 +20,10 @@ class UserController extends Controller {
 	/* 个人中心首页 */
 	public function index(){
         if(is_login()){
-            echo '11111';
+            $this->display();
         }else{
+            $url=strstr( $_SERVER['REQUEST_URI'],'.' ,true );
+            session('url',$url);
             $this->error('您还没有登录，请先登录！', U('User/login'));
         }
 	}
@@ -69,8 +71,9 @@ class UserController extends Controller {
 				/* 登录用户 */
 				$Member = D('Member');
 				if($Member->login($uid)){ //登录用户
+                    $value = session('url');
 					//TODO:跳转到登录前页面
-					$this->success('登录成功！',U('Index/index'));
+					$this->success('登录成功！',U($value));
 				} else {
 
 					$this->error($Member->getError());

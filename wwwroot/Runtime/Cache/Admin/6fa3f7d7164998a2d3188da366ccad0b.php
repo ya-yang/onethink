@@ -85,64 +85,45 @@
             
 
             
-    <!-- 标题栏 -->
     <div class="main-title">
-        <h2>用户列表</h2>
+        <h2>报修详情</h2>
     </div>
-    <div class="cf">
-        <div class="fl">
-            <a class="btn" href="<?php echo U('add');?>">添 加</a>
-            <button class="btn ajax-post confirm" url="<?php echo U('changeStatus?method=deleteUser');?>" target-form="ids">删 除</button>
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-item">
+            <span class="item-label">报修编号：
+                <span class="check-tips"><?php echo ($info["order_id"]); ?></span>
+            </span>
         </div>
-   <!-- 高级搜索 -->
-        <div class="search-form fr cf">
-            <div class="sleft">
-                <input type="text" name="nickname" class="search-input" value="<?php echo I('nickname');?>" placeholder="请输入用户昵称或者ID">
-                <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('index');?>"><i class="btn-search"></i></a>
+        <div class="form-item">
+            <span class="item-label">状态：
+                <span class="check-tips"><?php echo ($info["status"]); ?></span>
+            </span>
+
+        </div>
+        <div class="form-item">
+            <span class="item-label">保修人：
+                 <span class="check-tips"><?php echo ($info["name"]); ?></span>
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label">报修电话：
+                 <span class="check-tips"><?php echo ($info["tel"]); ?></span>
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label">问题：
+                <span class="check-tips"><?php echo ($info["question"]); ?></span>
+            </span>
+        </div>
+        <div class="form-item">
+            <label class="item-label">说明</label>
+            <div class="controls">
+                <label class="textarea input-large">
+                    <textarea disabled name="remark"><?php echo ($info["description"]); ?></textarea>
+                </label>
             </div>
         </div>
-    </div>
-    <!-- 数据列表 -->
-    <div class="data-table table-striped">
-        <table class="">
-            <thead>
-            <tr>
-                <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-                <th class="">报修单号</th>
-                <th class="">报修人</th>
-                <th class="">电话</th>
-                <th class="">地址</th>
-                <th class="">问题</th>
-                <th class="">报修时间</th>
-                <th class="">状态</th>
-                <th class="">操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$repair): $mod = ($i % 2 );++$i;?><tr>
-                        <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["uid"]); ?>" /></td>
-                        <td><?php echo ($repair["order_id"]); ?> </td>
-                        <td><?php echo ($repair["name"]); ?></td>
-                        <td><?php echo ($repair["tel"]); ?></td>
-                        <td><?php echo ($repair["address"]); ?></td>
-                        <td><span><?php echo ($repair["question"]); ?></span></td>
-                        <td><span><?php echo (time_format($repair["create_time"])); ?></span></td>
-                        <td><?php echo $repair['status']==1?'处理完成':'待处理';?></td>
-                        <td><?php if(($repair["status"]) == "0"): ?><a href="<?php echo U('Center/deal?id='.$repair['id']);?>" class="ajax-get">处理完成</a>
-                            <?php else: ?>
-                            </a><?php endif; ?>
-                            <a href="<?php echo U('Center/detail?id='.$repair['id']);?>" class="authorize">查看详细</a>
-                            <a href="" class="confirm ajax-get">删除</a>
-                        </td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                <?php else: ?>
-                <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="page">
-        <?php echo ($page); ?>
-    </div>
+    </form>
 
         </div>
         <div class="cont-ft">
@@ -237,32 +218,5 @@
         }();
     </script>
     
-    <script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
-
-    <script type="text/javascript">
-        //搜索功能
-        $("#search").click(function(){
-            var url = $(this).attr('url');
-            var query  = $('.search-form').find('input').serialize();
-            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
-            query = query.replace(/^&/g,'');
-            if( url.indexOf('?')>0 ){
-                url += '&' + query;
-            }else{
-                url += '?' + query;
-            }
-            window.location.href = url;
-        });
-        //回车搜索
-        $(".search-input").keyup(function(e){
-            if(e.keyCode === 13){
-                $("#search").click();
-                return false;
-            }
-        });
-        //导航高亮
-        highlight_subnav('<?php echo U('User/index');?>');
-    </script>
-
 </body>
 </html>

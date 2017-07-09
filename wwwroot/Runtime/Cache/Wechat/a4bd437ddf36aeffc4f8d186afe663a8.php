@@ -27,7 +27,7 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid text-center">
             <div class="col-xs-3">
-                <p class="navbar-text"><a href="index.html" class="navbar-link">首页</a></p>
+                <p class="navbar-text"><a href="<?php echo U('Index/index');?>" class="navbar-link">首页</a></p>
             </div>
             <div class="col-xs-3">
                 <p class="navbar-text"><a href="fuwu.html" class="navbar-link">服务</a></p>
@@ -66,7 +66,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="online.html">
+                        <a href="<?php echo U('Repair/add');?>">
                             <div class="indexLabel label-info">
                                 <span class="glyphicon glyphicon-heart-empty"></span><br/>
                                 在线报修

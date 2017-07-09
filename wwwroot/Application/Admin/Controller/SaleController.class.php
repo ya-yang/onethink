@@ -23,6 +23,7 @@ class SaleController extends AdminController
     {
         if (IS_POST) {
             $sale = D('Sale');
+
             $data = $sale->create();
             if ($data) {
                 $id = $sale->add();
